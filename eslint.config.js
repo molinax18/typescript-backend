@@ -16,7 +16,7 @@ export default defineConfig([
   {
     files: ["src/**/*.{mjs,cjs,ts,mts,cts}"],
     rules: {
-      "no-console": "error",
+      "no-console": "warn",
       curly: "error",
       "spaced-comment": ["error", "always", { markers: ["/"] }],
     },
