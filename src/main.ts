@@ -1,13 +1,9 @@
-import express from "express";
-import { connectDatabase } from "./database.js";
+import express, { json } from "express";
+import { todoListRouter } from "./routes/todo-list.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-await connectDatabase();
-
-app.get("/", (_req, res) => {
-  res.send("Hello! Ariel");
-});
-
-app.listen(PORT, () => {});
+app.use(json());
+app.use("/todo-list", todoListRouter);
+app.listen(PORT);

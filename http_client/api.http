@@ -1,1 +1,24 @@
-GET http://localhost:3000/ HTTP/1.1
+GET http://localhost:3000/todo-list/ HTTP/1.1
+
+###
+
+POST http://localhost:3000/todo-list/ HTTP/1.1
+content-type: application/json
+
+{
+  "title": "Mi primer todo",
+  "description": "Este es mi primer todo del ejercicio de backend con TypeScript"
+}
+
+###
+
+PATCH http://localhost:3000/todo-list/6aa2067364ad767b6677e423 HTTP/1.1
+content-type: application/json
+
+{
+  "done": true
+}
+
+###
+
+DELETE http://localhost:3000/todo-list/6aa2067364ad767b6677e423 HTTP/1.1
