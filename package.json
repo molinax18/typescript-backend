@@ -10,7 +10,7 @@
     "build": "npx tsc",
     "start": "node ./dist/main.js",
     "dev": "nodemon --watch src --ext ts,js,json --ignore src/**/*.spec.ts --exec tsx src/main.ts",
-    "lint": "npx eslint .",
+    "lint": "npx eslint ./src/",
     "format": "npx prettier ./src/ --write",
     "prepare": "husky"
   },

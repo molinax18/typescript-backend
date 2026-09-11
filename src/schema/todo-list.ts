@@ -1,4 +1,4 @@
-import { model, Schema, Document } from "mongoose";
+import { model, Schema, type Document } from "mongoose";
 
 export type TTodoList = {
   title: string;
